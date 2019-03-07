@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TextInputDialog;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
@@ -17,14 +18,17 @@ public class CoffeeShoppeGUI extends Application {
 		launch(args);
 	}
 	
+	
 	@Override
 	public void start(Stage primaryStage) {
 		primaryStage.setTitle("Jim Coffee Shoppe");
 		
 		Button btn = new Button();
+		TextInputDialog td = new TextInputDialog("Enter text here");
 		Label label1 = new Label();
 		TextField textField = new TextField ();
 		HBox hb = new HBox();
+		td.show();
 		
 		btn.setText("Test button 1");
 		btn.setOnAction(new EventHandler<ActionEvent> () {
@@ -47,6 +51,8 @@ public class CoffeeShoppeGUI extends Application {
 		primaryStage.show();
 		
 	}
+	
+	
 }
 
 
