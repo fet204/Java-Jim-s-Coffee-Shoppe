@@ -19,7 +19,7 @@ public class CoffeeShoppeGUI extends Application {
 	
 	@Override
 	public void start(Stage primaryStage) {
-		primaryStage.setTitle("Jim's Coffee Shoppe");
+		primaryStage.setTitle("Hi");
 		
 		Button btn = new Button();
 		Label label1 = new Label();
