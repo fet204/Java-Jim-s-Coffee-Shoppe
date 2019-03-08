@@ -27,6 +27,8 @@ public class CoffeeShoppeGUI extends Application {
 	Text text;
 	TextField tf;
 	
+	static String b, btn, btn2, btn3, cream, rawS, shot;
+	
 	// Initializing values for the buttons
 	double small = 1.25;
 	int totSmall = 0;
@@ -34,6 +36,7 @@ public class CoffeeShoppeGUI extends Application {
 	int totMed = 0;
 	double large = 2.30;
 	int totLarge = 0;
+	double totSum = 0;
 	
 	// initializing the values for the extras button
 	int creamC = 0;
@@ -116,6 +119,7 @@ public class CoffeeShoppeGUI extends Application {
 			@Override
 			public void handle(ActionEvent event) {
 				totMed++;
+				
 				System.out.println("Number of medium: " + totMed);
 				
 			}
@@ -185,6 +189,8 @@ public class CoffeeShoppeGUI extends Application {
 				
 		// Retrieving the observable list object
 		ObservableList list = root.getChildren();
+		
+
 
 		// Setting the text object as a node to the group object
 		list.add(text);
@@ -197,7 +203,8 @@ public class CoffeeShoppeGUI extends Application {
 		list.add(cream);
 		list.add(rawS);
 		list.add(shot);
-
+		
+		
 		// Creating a scene object
 		Scene scene = new Scene(root, 800, 600);
 
@@ -228,5 +235,7 @@ public class CoffeeShoppeGUI extends Application {
 	private static void changeText(String result, Text t) {
 		t.setText("Welcome " + result);
 	}
+	
+	
 	
 }
