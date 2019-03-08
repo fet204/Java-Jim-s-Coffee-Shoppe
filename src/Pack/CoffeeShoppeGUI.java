@@ -52,7 +52,7 @@ public class CoffeeShoppeGUI extends Application {
 
 		// Button for name change
 		Button b = new Button("Want to change your name?");
-		b.setTranslateX(400);
+		b.setTranslateX(300);
 		b.setTranslateY(75);
 		b.setVisible(false);
 
@@ -94,6 +94,7 @@ public class CoffeeShoppeGUI extends Application {
 
 		// Creating small coffee button options
 		Button btn = new Button();
+		Text smallT = new Text();
 		btn.setMinSize(156, 50);
 		btn.setText("Press for 1 Small Coffee");
 		btn.setLayoutX(50);
