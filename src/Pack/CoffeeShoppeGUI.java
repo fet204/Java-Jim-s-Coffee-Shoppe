@@ -24,7 +24,15 @@ import javafx.stage.Stage;
 public class CoffeeShoppeGUI extends Application {
 
 	String result;
-
+	
+	// Initializing values for the buttons
+	double small = 1.25;
+	int totSmall = 0;
+	double med = 1.75;
+	int totMed = 0;
+	double large = 2.30;
+	int totLarge = 0;
+	
 	public static void main(String[] args) {
 		launch(args);
 	}
@@ -32,15 +40,7 @@ public class CoffeeShoppeGUI extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		primaryStage.setTitle("Jim Coffee Shoppe");
-		
-		// Initializing values for the buttons
-		final double small = 1.25;
-		int totSmall = 0;
-		final double med = 0;
-		int totMed = 0;
-		final double large = 0;
-		int totLarge = 0;
-		
+			
 		Label label1 = new Label("Name:");
 		TextField textField = new TextField();
 		textField.setText("Name here and click the Enter key when done");
@@ -76,20 +76,51 @@ public class CoffeeShoppeGUI extends Application {
 		// Creating a Group object
 		Group root = new Group();
 		
-		// Creating button options
+		// Creating small coffee button options
 		Button btn = new Button();
-		btn.setText("testing");
+		btn.setText("Press for 1 Small Coffee");
 		btn.setLayoutX(50);
 		btn.setLayoutY(200);
-		btn.setOnKeyPressed(new EventHandler<KeyEvent> () {
+		btn.setOnAction(new EventHandler<ActionEvent> () {
 			
 			@Override
-			public void handle(KeyEvent event) {
-				System.out.println("Button");
+			public void handle(ActionEvent event) {
+				totSmall++;
+				System.out.println("Number of small: " + totSmall);
+				
 			}
 			
 		});
-		
+		// Creating medium size coffee buttons
+		Button btn2 = new Button();
+		btn2.setText("Press for 1 Medium Coffee");
+		btn2.setLayoutX(50);
+		btn2.setLayoutY(250);
+		btn2.setOnAction(new EventHandler<ActionEvent> () {
+			
+			@Override
+			public void handle(ActionEvent event) {
+				totMed++;
+				System.out.println("Number of medium: " + totMed);
+				
+			}
+			
+		});
+		// Creating large size coffee buttons
+				Button btn3 = new Button();
+				btn3.setText("Press for 1 Medium Coffee");
+				btn3.setLayoutX(50);
+				btn3.setLayoutY(300);
+				btn3.setOnAction(new EventHandler<ActionEvent> () {
+					
+					@Override
+					public void handle(ActionEvent event) {
+						totLarge++;
+						System.out.println("Number of large: " + totLarge);
+						
+					}
+					
+				});
 		
 		// Retrieving the observable list object
 		ObservableList list = root.getChildren();
@@ -98,6 +129,8 @@ public class CoffeeShoppeGUI extends Application {
 		list.add(text);
 		list.add(textField);
 		list.add(btn);
+		list.add(btn2);
+		list.add(btn3);
 
 		// Creating a scene object
 		Scene scene = new Scene(root, 600, 600);
