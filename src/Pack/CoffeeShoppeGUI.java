@@ -12,6 +12,8 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextInputDialog;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.TilePane;
@@ -34,12 +36,9 @@ public class CoffeeShoppeGUI extends Application {
 		
 		Label label1 = new Label("Name:");
 		TextField textField = new TextField ();
-<<<<<<< HEAD
 		textField.setText("Name here and click the Enter key when done");
-=======
 		textField.setText("Name here");
 		textField.getText();
->>>>>>> f15b4e71af793ed6eb0241259b507aa18174f71d
 		
 		
 	    //Creating a Text object 
@@ -49,7 +48,6 @@ public class CoffeeShoppeGUI extends Application {
 	      text.setFont(new Font(45)); 
 	       
 	      //setting the position of the text 
-<<<<<<< HEAD
 	      text.setX(100);       
 	      text.setY(50);
 	      text.setWrappingWidth(0);
@@ -66,7 +64,6 @@ public class CoffeeShoppeGUI extends Application {
 	              }
 	          }
 	      });
-=======
 	      text.setX(50); 
 	      text.setY(150);          
 	      
@@ -82,7 +79,6 @@ public class CoffeeShoppeGUI extends Application {
 	      //Moving the selection to the right side
 	      test1.setLayoutX(500);
 	      test1.setLayoutY(25);
->>>>>>> f15b4e71af793ed6eb0241259b507aa18174f71d
 	         
 	      //Creating a Group object  
 	      Group root = new Group(); 
