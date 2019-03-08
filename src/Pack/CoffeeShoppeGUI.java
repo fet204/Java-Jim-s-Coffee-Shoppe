@@ -22,117 +22,69 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class CoffeeShoppeGUI extends Application {
-	
+
 	String result;
-	
+
 	public static void main(String[] args) {
 		launch(args);
 	}
-	
-	
+
 	@Override
 	public void start(Stage primaryStage) {
 		primaryStage.setTitle("Jim Coffee Shoppe");
-		
+
 		Label label1 = new Label("Name:");
-		TextField textField = new TextField ();
+		TextField textField = new TextField();
 		textField.setText("Name here and click the Enter key when done");
 		textField.setText("Name here");
 		textField.getText();
-		
-		
-	    //Creating a Text object 
-	      Text text = new Text(); 
-	       
-	      //Setting font to the text 
-	      text.setFont(new Font(45)); 
-	       
-	      //setting the position of the text 
-	      text.setX(100);       
-	      text.setY(50);
-	      text.setWrappingWidth(0);
 
-	      System.out.println(textField.getText());
-	      textField.setOnKeyPressed(new EventHandler<KeyEvent>()
-	      {
-	          @Override
-	          public void handle(KeyEvent ke)
-	          {
-	              if (ke.getCode().equals(KeyCode.ENTER))
-	              {
-	                  text.setText("Welcome " + textField.getText());
-	              }
-	          }
-	      });
-	      text.setX(50); 
-	      text.setY(150);          
-	      
-	      //Setting the text to be added. 
-	      text.setText("Welcome " ); 
-	         
-	      //Creating a Group object  
-	      Group root = new Group(); 
-	       
-	      //Retrieving the observable list object 
-	      ObservableList list = root.getChildren(); 
-	       
-	      //Setting the text object as a node to the group object 
-	      list.add(text);
-	      list.add(textField);
-	      
-	      //Creating a scene object 
-	      Scene scene = new Scene(root, 600,600); 
-	       
-	      //Setting title to the Stage 
-	      primaryStage.setTitle("Sample Application"); 
-	         
-	      //Adding scene to the stage 
-	      primaryStage.setScene(scene); 
-	         
-	      //Displaying the contents of the stage 
-	      primaryStage.show(); 
-	   } 
+		// Creating a Text object
+		Text text = new Text();
+
+		// Setting font to the text
+		text.setFont(new Font(45));
+
+		// setting the position of the text
+		text.setX(100);
+		text.setY(50);
+		text.setWrappingWidth(0);
+
+		System.out.println(textField.getText());
+		textField.setOnKeyPressed(new EventHandler<KeyEvent>() {
+			@Override
+			public void handle(KeyEvent ke) {
+				if (ke.getCode().equals(KeyCode.ENTER)) {
+					text.setText("Welcome " + textField.getText());
+				}
+			}
+		});
+		text.setX(50);
+		text.setY(150);
+
+		// Setting the text to be added.
+		text.setText("Welcome ");
+
+		// Creating a Group object
+		Group root = new Group();
+
+		// Retrieving the observable list object
+		ObservableList list = root.getChildren();
+
+		// Setting the text object as a node to the group object
+		list.add(text);
+		list.add(textField);
+
+		// Creating a scene object
+		Scene scene = new Scene(root, 600, 600);
+
+		// Setting title to the Stage
+		primaryStage.setTitle("Sample Application");
+
+		// Adding scene to the stage
+		primaryStage.setScene(scene);
+
+		// Displaying the contents of the stage
+		primaryStage.show();
+	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
