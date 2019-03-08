@@ -33,6 +33,12 @@ public class CoffeeShoppeGUI extends Application {
 	double large = 2.30;
 	int totLarge = 0;
 	
+	// initializing the values for the extras button
+	int creamC = 0;
+	int rawSugarC = 0;
+	int espressoShotC = 0;
+	double espressoPrice = 0.75;
+	
 	public static void main(String[] args) {
 		launch(args);
 	}
@@ -121,7 +127,53 @@ public class CoffeeShoppeGUI extends Application {
 					}
 					
 				});
-		
+				
+		// Selection for cream button	
+				Button cream = new Button();
+				cream.setText("Press to add cream");
+				cream.setLayoutX(350);
+				cream.setLayoutY(200);
+				cream.setOnAction(new EventHandler<ActionEvent> () {
+					
+					@Override
+					public void handle(ActionEvent event) {
+						creamC++;
+						System.out.println("# of cream: " + creamC);
+						
+					}
+					
+				});
+		// Selection for rawSugar button	
+				Button rawS = new Button();
+				rawS.setText("Press to add raw sugar");
+				rawS.setLayoutX(330);
+				rawS.setLayoutY(250);
+				rawS.setOnAction(new EventHandler<ActionEvent> () {
+					
+					@Override
+					public void handle(ActionEvent event) {
+						rawSugarC++;
+						System.out.println("# of rawSugar: " + rawSugarC);
+						
+					}
+					
+				});				
+		// Selection for rawSugar button	
+				Button shot = new Button();
+				shot.setText("Press to add shots");
+				shot.setLayoutX(355);
+				shot.setLayoutY(300);
+				shot.setOnAction(new EventHandler<ActionEvent> () {
+					
+					@Override
+					public void handle(ActionEvent event) {
+						espressoShotC++;
+						System.out.println("# of shots: " + espressoShotC);
+						
+					}
+					
+				});			
+				
 		// Retrieving the observable list object
 		ObservableList list = root.getChildren();
 
@@ -131,9 +183,12 @@ public class CoffeeShoppeGUI extends Application {
 		list.add(btn);
 		list.add(btn2);
 		list.add(btn3);
+		list.add(cream);
+		list.add(rawS);
+		list.add(shot);
 
 		// Creating a scene object
-		Scene scene = new Scene(root, 600, 600);
+		Scene scene = new Scene(root, 800, 600);
 
 		// Setting title to the Stage
 		primaryStage.setTitle("Sample Application");
