@@ -60,7 +60,7 @@ public class CoffeeShoppeGUI extends Application {
 
 		// Creating a Text object
 		text = new Text();
-			
+		
 		Label label1 = new Label("Name:");
 
 		// Setting font to the text
@@ -90,13 +90,6 @@ public class CoffeeShoppeGUI extends Application {
 
 		// Creating a Group object
 		Group root = new Group();
-
-		// setting the position of the text
-		text.setX(100);
-		text.setY(50);
-		text.setWrappingWidth(0);
-		text.setX(50);
-		text.setY(150);
 		
 		// Creating small coffee button options
 		Button btn = new Button();
@@ -235,4 +228,5 @@ public class CoffeeShoppeGUI extends Application {
 	private static void changeText(String result, Text t) {
 		t.setText("Welcome " + result);
 	}
+	
 }
