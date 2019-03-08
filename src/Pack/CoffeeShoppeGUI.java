@@ -34,7 +34,7 @@ public class CoffeeShoppeGUI extends Application {
 		
 		Label label1 = new Label("Name:");
 		TextField textField = new TextField ();
-		textField.setText("Name here");
+		textField.setText("Name here and click the Enter key when done");
 		
 		
 	    //Creating a Text object 
@@ -44,7 +44,8 @@ public class CoffeeShoppeGUI extends Application {
 	      text.setFont(new Font(45)); 
 	       
 	      //setting the position of the text 
-	      text.setX(50);        
+	      text.setX(100);       
+	      text.setY(50);
 	      text.setWrappingWidth(0);
 
 	      System.out.println(textField.getText());
@@ -62,8 +63,6 @@ public class CoffeeShoppeGUI extends Application {
 	         
 	      //Creating a Group object  
 	      Group root = new Group(); 
-	      root.setLayoutX(100);
-	      root.setLayoutY(100);
 	       
 	      //Retrieving the observable list object 
 	      ObservableList list = root.getChildren(); 
