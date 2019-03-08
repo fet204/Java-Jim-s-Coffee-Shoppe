@@ -26,10 +26,8 @@ import javafx.stage.Stage;
 public class CoffeeShoppeGUI extends Application {
 
 	String result;
-<<<<<<< HEAD
 	Text text;
 	TextField tf;
-=======
 	
 	// Initializing values for the buttons
 	double small = 1.25;
@@ -45,7 +43,6 @@ public class CoffeeShoppeGUI extends Application {
 	int espressoShotC = 0;
 	double espressoPrice = 0.75;
 	
->>>>>>> fbe5ec39a3b772349c73cd9b82c315540759849b
 	public static void main(String[] args) {
 		launch(args);
 	}
@@ -53,7 +50,6 @@ public class CoffeeShoppeGUI extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		primaryStage.setTitle("Jim Coffee Shoppe");
-<<<<<<< HEAD
 
 		// Button for name change
 		Button b = new Button("Want to change your name?");
@@ -61,29 +57,17 @@ public class CoffeeShoppeGUI extends Application {
 		b.setTranslateY(75);
 		b.setVisible(false);
 
-		Label label1 = new Label("Name:");
-
 		// Make a text field object
 		tf = new TextField("Enter name here");
 
 		// Creating a Text object
 		text = new Text();
-=======
 			
 		Label label1 = new Label("Name:");
-		TextField textField = new TextField();
-		textField.setText("Name here and click the Enter key when done");
-		textField.setText("Name here");
-		textField.getText();
-
-		// Creating a Text object
-		Text text = new Text();
->>>>>>> fbe5ec39a3b772349c73cd9b82c315540759849b
 
 		// Setting font to the text
 		text.setFont(new Font(45));
 
-<<<<<<< HEAD
 		System.out.println(tf.getText());
 		tf.setOnKeyPressed(new EventHandler<KeyEvent>() {
 			@Override
@@ -97,7 +81,6 @@ public class CoffeeShoppeGUI extends Application {
 		});
 
 		b.setOnAction(new EventHandler<ActionEvent>() {
-			 
             @Override
             public void handle(ActionEvent event) {
                 showInputDialog(text);
@@ -110,29 +93,12 @@ public class CoffeeShoppeGUI extends Application {
 		// Creating a Group object
 		Group root = new Group();
 
-=======
 		// setting the position of the text
 		text.setX(100);
 		text.setY(50);
 		text.setWrappingWidth(0);
-
-		System.out.println(textField.getText());
-		textField.setOnKeyPressed(new EventHandler<KeyEvent>() {
-			@Override
-			public void handle(KeyEvent ke) {
-				if (ke.getCode().equals(KeyCode.ENTER)) {
-					text.setText("Welcome " + textField.getText());
-				}
-			}
-		});
 		text.setX(50);
 		text.setY(150);
-
-		// Setting the text to be added.
-		text.setText("Welcome ");
-
-		// Creating a Group object
-		Group root = new Group();
 		
 		// Creating small coffee button options
 		Button btn = new Button();
@@ -226,20 +192,14 @@ public class CoffeeShoppeGUI extends Application {
 					
 				});			
 				
->>>>>>> fbe5ec39a3b772349c73cd9b82c315540759849b
 		// Retrieving the observable list object
 		ObservableList list = root.getChildren();
 
 		// Setting the text object as a node to the group object
 		list.add(text);
-<<<<<<< HEAD
 		list.add(tf);
 		list.add(b);
 
-		// Creating a scene object
-		Scene scene = new Scene(root, 600, 600);
-=======
-		list.add(textField);
 		list.add(btn);
 		list.add(btn2);
 		list.add(btn3);
@@ -249,7 +209,6 @@ public class CoffeeShoppeGUI extends Application {
 
 		// Creating a scene object
 		Scene scene = new Scene(root, 800, 600);
->>>>>>> fbe5ec39a3b772349c73cd9b82c315540759849b
 
 		// Setting title to the Stage
 		primaryStage.setTitle("Sample Application");
@@ -260,7 +219,6 @@ public class CoffeeShoppeGUI extends Application {
 		// Displaying the contents of the stage
 		primaryStage.show();
 	}
-<<<<<<< HEAD
 	
 	private static void showInputDialog(Text t) {
 		TextInputDialog d = new TextInputDialog("Change");
@@ -279,6 +237,4 @@ public class CoffeeShoppeGUI extends Application {
 	private static void changeText(String result, Text t) {
 		t.setText("Welcome " + result);
 	}
-=======
->>>>>>> fbe5ec39a3b772349c73cd9b82c315540759849b
 }
