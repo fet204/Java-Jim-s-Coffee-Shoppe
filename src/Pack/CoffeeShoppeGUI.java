@@ -1,12 +1,14 @@
 package Pack;
 
 import javafx.application.Application;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextInputDialog;
@@ -48,6 +50,16 @@ public class CoffeeShoppeGUI extends Application {
 	      
 	      //Setting the text to be added. 
 	      text.setText("Welcome " ); 
+	      //Selection boxes for coffee, beverage size, and price
+	      ChoiceBox test1 = new ChoiceBox();
+	      test1.setItems(FXCollections.observableArrayList(
+	    		  "Selections", "Open"));
+	      
+	      test1.show();
+	      
+	      //Moving the selection to the right side
+	      test1.setLayoutX(500);
+	      test1.setLayoutY(25);
 	         
 	      //Creating a Group object  
 	      Group root = new Group(); 
@@ -58,7 +70,8 @@ public class CoffeeShoppeGUI extends Application {
 	      //Setting the text object as a node to the group object 
 	      list.add(text);
 	      list.add(textField);
-	               
+	      list.add(test1);
+	      
 	      //Creating a scene object 
 	      Scene scene = new Scene(root, 600,600); 
 	       
