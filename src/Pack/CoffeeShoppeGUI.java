@@ -95,6 +95,9 @@ public class CoffeeShoppeGUI extends Application {
 		// Creating small coffee button options
 		Button btn = new Button();
 		Text smallT = new Text();
+		smallT.setX(165);
+		smallT.setY(50);
+		smallT.setVisible(false);
 		btn.setMinSize(156, 50);
 		btn.setText("Small Coffee: $1.25");
 		btn.setLayoutX(50);
@@ -106,7 +109,7 @@ public class CoffeeShoppeGUI extends Application {
 				totSmall++;
 				totSum += small;
 				System.out.println("Number of small: " + totSmall);
-
+				smallT.setVisible(true);
 			}
 
 		});
