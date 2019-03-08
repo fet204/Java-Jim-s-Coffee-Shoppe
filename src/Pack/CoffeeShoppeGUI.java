@@ -95,7 +95,7 @@ public class CoffeeShoppeGUI extends Application {
 		// Creating small coffee button options
 		Button btn = new Button();
 		btn.setMinSize(156, 50);
-		btn.setText("Press for 1 Small Coffee");
+		btn.setText("Small Coffee: $1.25");
 		btn.setLayoutX(50);
 		btn.setLayoutY(200);
 		btn.setOnAction(new EventHandler<ActionEvent>() {
@@ -112,7 +112,7 @@ public class CoffeeShoppeGUI extends Application {
 		// Creating medium size coffee buttons
 		Button btn2 = new Button();
 		btn2.setMinSize(156, 50);
-		btn2.setText("Press for 1 Medium Coffee");
+		btn2.setText("Medium Coffee: $1.75");
 		btn2.setLayoutX(50);
 		btn2.setLayoutY(250);
 		btn2.setOnAction(new EventHandler<ActionEvent>() {
@@ -129,7 +129,7 @@ public class CoffeeShoppeGUI extends Application {
 		// Creating large size coffee buttons
 		Button btn3 = new Button();
 		btn3.setMinSize(156, 50);
-		btn3.setText("Press for 1 Medium Coffee");
+		btn3.setText("Large Coffee: $2.30");
 		btn3.setLayoutX(50);
 		btn3.setLayoutY(300);
 		btn3.setOnAction(new EventHandler<ActionEvent>() {
@@ -147,7 +147,7 @@ public class CoffeeShoppeGUI extends Application {
 		// Selection for cream button
 		Button cream = new Button();
 		cream.setMinSize(156, 50);
-		cream.setText("Press to add cream");
+		cream.setText("Cream: Free");
 		cream.setLayoutX(346);
 		cream.setLayoutY(200);
 		cream.setOnAction(new EventHandler<ActionEvent>() {
@@ -163,7 +163,7 @@ public class CoffeeShoppeGUI extends Application {
 		// Selection for rawSugar button
 		Button rawS = new Button();
 		rawS.setMinSize(156, 50);
-		rawS.setText("Press to add raw sugar");
+		rawS.setText("Raw sugar: Free");
 		rawS.setLayoutX(346);
 		rawS.setLayoutY(250);
 		rawS.setOnAction(new EventHandler<ActionEvent>() {
@@ -179,7 +179,7 @@ public class CoffeeShoppeGUI extends Application {
 		// Selection for shot button
 		Button shot = new Button();
 		shot.setMinSize(156, 50);
-		shot.setText("Press to add shots");
+		shot.setText("Extra shots: $0.75");
 		shot.setLayoutX(346);
 		shot.setLayoutY(300);
 		shot.setOnAction(new EventHandler<ActionEvent>() {
