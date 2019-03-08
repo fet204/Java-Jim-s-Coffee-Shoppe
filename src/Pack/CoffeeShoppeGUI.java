@@ -32,7 +32,15 @@ public class CoffeeShoppeGUI extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		primaryStage.setTitle("Jim Coffee Shoppe");
-
+		
+		// Initializing values for the buttons
+		final double small = 1.25;
+		int totSmall = 0;
+		final double med = 0;
+		int totMed = 0;
+		final double large = 0;
+		int totLarge = 0;
+		
 		Label label1 = new Label("Name:");
 		TextField textField = new TextField();
 		textField.setText("Name here and click the Enter key when done");
@@ -67,13 +75,29 @@ public class CoffeeShoppeGUI extends Application {
 
 		// Creating a Group object
 		Group root = new Group();
-
+		
+		// Creating button options
+		Button btn = new Button();
+		btn.setText("testing");
+		btn.setLayoutX(50);
+		btn.setLayoutY(200);
+		btn.setOnKeyPressed(new EventHandler<KeyEvent> () {
+			
+			@Override
+			public void handle(KeyEvent event) {
+				System.out.println("Button");
+			}
+			
+		});
+		
+		
 		// Retrieving the observable list object
 		ObservableList list = root.getChildren();
 
 		// Setting the text object as a node to the group object
 		list.add(text);
 		list.add(textField);
+		list.add(btn);
 
 		// Creating a scene object
 		Scene scene = new Scene(root, 600, 600);
