@@ -52,7 +52,7 @@ public class CoffeeShoppeGUI extends Application {
 
 		// Button for name change
 		Button b = new Button("Want to change your name?");
-		b.setTranslateX(175);
+		b.setTranslateX(400);
 		b.setTranslateY(75);
 		b.setVisible(false);
 
@@ -86,7 +86,7 @@ public class CoffeeShoppeGUI extends Application {
 			}
 		});
 
-		text.setX(175);
+		text.setX(275);
 		text.setY(50);
 
 		// Creating a Group object
@@ -243,9 +243,6 @@ public class CoffeeShoppeGUI extends Application {
 
 		// Creating a scene object
 		Scene scene = new Scene(root, 800, 600);
-
-		// Setting title to the Stage
-		primaryStage.setTitle("Sample Application");
 
 		// Adding scene to the stage
 		primaryStage.setScene(scene);
