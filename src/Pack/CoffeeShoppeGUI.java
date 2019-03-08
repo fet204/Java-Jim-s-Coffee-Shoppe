@@ -40,7 +40,7 @@ public class CoffeeShoppeGUI extends Application {
 	int creamC = 0;
 	int rawSugarC = 0;
 	int espressoShotC = 0;
-	double espressoPrice = 0.75;
+	double eP = 0.75;
 
 	public static void main(String[] args) {
 		launch(args);
@@ -94,6 +94,7 @@ public class CoffeeShoppeGUI extends Application {
 
 		// Creating small coffee button options
 		Button btn = new Button();
+		btn.setMinSize(156, 50);
 		btn.setText("Press for 1 Small Coffee");
 		btn.setLayoutX(50);
 		btn.setLayoutY(200);
@@ -102,6 +103,7 @@ public class CoffeeShoppeGUI extends Application {
 			@Override
 			public void handle(ActionEvent event) {
 				totSmall++;
+				totSum += small;
 				System.out.println("Number of small: " + totSmall);
 
 			}
@@ -109,6 +111,7 @@ public class CoffeeShoppeGUI extends Application {
 		});
 		// Creating medium size coffee buttons
 		Button btn2 = new Button();
+		btn2.setMinSize(156, 50);
 		btn2.setText("Press for 1 Medium Coffee");
 		btn2.setLayoutX(50);
 		btn2.setLayoutY(250);
@@ -117,7 +120,7 @@ public class CoffeeShoppeGUI extends Application {
 			@Override
 			public void handle(ActionEvent event) {
 				totMed++;
-				
+				totSum += med;
 				System.out.println("Number of medium: " + totMed);
 
 			}
@@ -125,6 +128,7 @@ public class CoffeeShoppeGUI extends Application {
 		});
 		// Creating large size coffee buttons
 		Button btn3 = new Button();
+		btn3.setMinSize(156, 50);
 		btn3.setText("Press for 1 Medium Coffee");
 		btn3.setLayoutX(50);
 		btn3.setLayoutY(300);
@@ -133,6 +137,7 @@ public class CoffeeShoppeGUI extends Application {
 			@Override
 			public void handle(ActionEvent event) {
 				totLarge++;
+				totSum += large;
 				System.out.println("Number of large: " + totLarge);
 
 			}
@@ -141,8 +146,9 @@ public class CoffeeShoppeGUI extends Application {
 
 		// Selection for cream button
 		Button cream = new Button();
+		cream.setMinSize(156, 50);
 		cream.setText("Press to add cream");
-		cream.setLayoutX(350);
+		cream.setLayoutX(346);
 		cream.setLayoutY(200);
 		cream.setOnAction(new EventHandler<ActionEvent>() {
 
@@ -156,8 +162,9 @@ public class CoffeeShoppeGUI extends Application {
 		});
 		// Selection for rawSugar button
 		Button rawS = new Button();
+		rawS.setMinSize(156, 50);
 		rawS.setText("Press to add raw sugar");
-		rawS.setLayoutX(330);
+		rawS.setLayoutX(346);
 		rawS.setLayoutY(250);
 		rawS.setOnAction(new EventHandler<ActionEvent>() {
 
@@ -169,21 +176,40 @@ public class CoffeeShoppeGUI extends Application {
 			}
 
 		});
-		// Selection for rawSugar button
+		// Selection for shot button
 		Button shot = new Button();
+		shot.setMinSize(156, 50);
 		shot.setText("Press to add shots");
-		shot.setLayoutX(355);
+		shot.setLayoutX(346);
 		shot.setLayoutY(300);
 		shot.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
 			public void handle(ActionEvent event) {
 				espressoShotC++;
+				totSum += eP;
 				System.out.println("# of shots: " + espressoShotC);
 
 			}
 
 		});
+		
+		// Selection for compute button
+				Button compute = new Button();
+				compute.setMinSize(150, 150);
+				compute.setText("COMPUTE");
+				compute.setLayoutX(350);
+				compute.setLayoutY(400);
+				compute.setOnAction(new EventHandler<ActionEvent>() {
+
+					@Override
+					public void handle(ActionEvent event) {
+						espressoShotC++;
+						System.out.println("total sum: " + totSum);
+
+					}
+
+				});
 		
 		//Button to close the entire program
 		Button sB = new Button("Click here to close");
@@ -212,6 +238,7 @@ public class CoffeeShoppeGUI extends Application {
 		list.add(cream);
 		list.add(rawS);
 		list.add(shot);
+		list.add(compute);
 		list.add(sB);
 
 		// Creating a scene object
