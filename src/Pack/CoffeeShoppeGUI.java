@@ -77,8 +77,8 @@ public class CoffeeShoppeGUI extends Application {
         computeAlert.setHeight(400);
         computeAlert.setTitle("Receipt");
         computeAlert.setHeaderText(null);
-        computeAlert.setContentText("Hey there " + computeName +
-                "\nHere is your order:\n"
+        computeAlert.setContentText("Hey there " + computeName + "\n"
+                + "Here is your order:\n"
                 + "You ordered " + totSmall + " amounts of small cofee\n"
                 + "You ordered " + totMed + " amounts of medium cofee\n"
                 + "You ordered " + totLarge + " amounts of large cofee\n"
@@ -266,7 +266,7 @@ public class CoffeeShoppeGUI extends Application {
         sB.setLayoutY(400);
         sB.setOnAction(event -> Platform.exit());
         // Retrieving the observable list object
-        ObservableList list = root.getChildren();
+        ObservableList<javafx.scene.Node> list = root.getChildren();
 
         // Setting the text object as a node to the group object
         list.add(text);
