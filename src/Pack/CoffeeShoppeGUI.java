@@ -116,24 +116,16 @@ public class CoffeeShoppeGUI extends Application {
 
         //Make an action event for the name change
         System.out.println(tf.getText());
-        tf.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent ke) {
-                if (ke.getCode().equals(KeyCode.ENTER)) {
-                    b.setVisible(true);
-                    tf.setVisible(false);
-                    changeText(tf.getText(), text);
-                    computeName = tf.getText();
-                }
+        tf.setOnKeyPressed(ke -> {
+            if (ke.getCode().equals(KeyCode.ENTER)) {
+                b.setVisible(true);
+                tf.setVisible(false);
+                changeText(tf.getText(), text);
+                computeName = tf.getText();
             }
         });
 
-        b.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                showInputDialog(text);
-            }
-        });
+        b.setOnAction(event -> showInputDialog(text));
 
         text.setX(275);
         text.setY(50);
