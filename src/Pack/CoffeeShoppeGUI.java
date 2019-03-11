@@ -79,9 +79,9 @@ public class CoffeeShoppeGUI extends Application {
         computeAlert.setHeaderText(null);
         computeAlert.setContentText("Hey there " + computeName + "\n"
                 + "Here is your order:\n"
-                + "You ordered " + totSmall + " amounts of small cofee\n"
-                + "You ordered " + totMed + " amounts of medium cofee\n"
-                + "You ordered " + totLarge + " amounts of large cofee\n"
+                + "You ordered " + totSmall + " amounts of small coffee\n"
+                + "You ordered " + totMed + " amounts of medium coffee\n"
+                + "You ordered " + totLarge + " amounts of large coffee\n"
 
                 + "\n\n"
                 + "You ordered " + creamC + " amounts of cream\n"
