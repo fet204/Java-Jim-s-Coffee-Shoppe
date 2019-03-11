@@ -1,67 +1,95 @@
 package Pack;
 
-import java.awt.Insets;
-import java.math.RoundingMode;
-import java.text.DecimalFormat;
-import java.util.Optional;
-
 import javafx.application.Application;
 import javafx.application.Platform;
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.control.TextInputDialog;
-import javafx.scene.control.Alert;
+import javafx.scene.control.*;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.StackPane;
-import javafx.scene.layout.TilePane;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+import java.util.Optional;
+
 public class CoffeeShoppeGUI extends Application {
 
-    String result;
-    Text text;
-    TextField tf;
-
-    //Do texts for the order numbers
-    Text smallT, medT, bigT;
-
-    Text creamT, sugarT, espressoT;
-    // Initializing values for the buttons
-    double small = 1.25;
-    double med = 1.75;
-    double large = 2.30;
-
     //Counting the amount of orders
-    static int totSmall = 0;
-    static int totMed = 0;
-    static int totLarge = 0;
-
-    static double totSum = 0;
-
+    static private int totSmall = 0;
+    static private int totMed = 0;
+    static private int totLarge = 0;
+    static private double totSum = 0;
     // initializing the values for the extras button
-    static int creamC = 0;
-    static int rawSugarC = 0;
-    static int espressoShotC = 0;
-    double eP = 0.75;
-
-    static String computeName = "";
-
+    static private int creamC = 0;
+    static private int rawSugarC = 0;
+    static private int espressoShotC = 0;
+    static private String computeName = "";
     //Declaring a new decimal format cause it's annoying me
     static DecimalFormat df = new DecimalFormat("#.##");
+    private Text text;
+    private TextField tf;
+    //Do texts for the order numbers
+    private Text smallT, medT, bigT;
+    private Text creamT, sugarT, espressoT;
+    // Initializing values for the buttons
+    private double small = 1.25;
+    private double med = 1.75;
+    private double large = 2.30;
+    private double eP = 0.75;
 
     public static void main(String[] args) {
         launch(args);
+    }
+
+    private static void showInputDialog(Text t) {
+        TextInputDialog d = new TextInputDialog("Change");
+
+        d.setTitle("Change name");
+        d.setHeaderText("Enter your name:");
+        d.setContentText("Name:");
+
+        Optional<String> result = d.showAndWait();
+        String trueResult = result.get();
+        result.ifPresent(name -> {
+            changeText(trueResult, t);
+        });
+
+        computeName = trueResult;
+    }
+
+    private static void changeText(String result, Text t) {
+        t.setText("Welcome " + result);
+    }
+
+    private static void showComputeDialog(){
+
+        df.setRoundingMode(RoundingMode.CEILING);
+
+        Alert computeAlert = new Alert(AlertType.INFORMATION);
+        computeAlert.setWidth(400);
+        computeAlert.setHeight(400);
+        computeAlert.setTitle("Receipt");
+        computeAlert.setHeaderText(null);
+        computeAlert.setContentText("Hey there " + computeName +
+                "\nHere is your order:\n"
+                + "You ordered " + totSmall + " amounts of small cofee\n"
+                + "You ordered " + totMed + " amounts of medium cofee\n"
+                + "You ordered " + totLarge + " amounts of large cofee\n"
+
+                + "\n\n"
+                + "You ordered " + creamC + " amounts of cream\n"
+                + "You ordered " + rawSugarC + " amounts of Sugar\n"
+                + "You ordered " + espressoShotC + " amounts of Espresso Shot"
+                + "\n\n\n\n For a grand total of: $"+df.format(totSum));
+
+        computeAlert.showAndWait();
     }
 
     @Override
@@ -81,7 +109,7 @@ public class CoffeeShoppeGUI extends Application {
         // Creating a Text object
         text = new Text();
 
-        Label label1 = new Label("Name:");
+        new Label("Name:");
 
         // Setting font to the text
         text.setFont(new Font(45));
@@ -124,17 +152,12 @@ public class CoffeeShoppeGUI extends Application {
         btn.setText("Small Coffee: $1.25");
         btn.setLayoutX(50);
         btn.setLayoutY(200);
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-
-            @Override
-            public void handle(ActionEvent event) {
-                totSmall++;
-                totSum += small;
-                System.out.println("Number of small: " + totSmall);
-                smallT.setText(Integer.toString(totSmall));
-                smallT.setVisible(true);
-            }
-
+        btn.setOnAction(event -> {
+            totSmall++;
+            totSum += small;
+            System.out.println("Number of small: " + totSmall);
+            smallT.setText(Integer.toString(totSmall));
+            smallT.setVisible(true);
         });
         // Creating medium size coffee buttons
         Button btn2 = new Button();
@@ -147,17 +170,12 @@ public class CoffeeShoppeGUI extends Application {
         btn2.setText("Medium Coffee: $1.75");
         btn2.setLayoutX(50);
         btn2.setLayoutY(250);
-        btn2.setOnAction(new EventHandler<ActionEvent>() {
-
-            @Override
-            public void handle(ActionEvent event) {
-                totMed++;
-                totSum += med;
-                System.out.println("Number of medium: " + totMed);
-                medT.setText(Integer.toString(totMed));
-                medT.setVisible(true);
-            }
-
+        btn2.setOnAction(event -> {
+            totMed++;
+            totSum += med;
+            System.out.println("Number of medium: " + totMed);
+            medT.setText(Integer.toString(totMed));
+            medT.setVisible(true);
         });
         // Creating large size coffee buttons
         Button btn3 = new Button();
@@ -170,17 +188,12 @@ public class CoffeeShoppeGUI extends Application {
         btn3.setText("Large Coffee: $2.30");
         btn3.setLayoutX(50);
         btn3.setLayoutY(300);
-        btn3.setOnAction(new EventHandler<ActionEvent>() {
-
-            @Override
-            public void handle(ActionEvent event) {
-                totLarge++;
-                totSum += large;
-                System.out.println("Number of large: " + totLarge);
-                bigT.setText(Integer.toString(totLarge));
-                bigT.setVisible(true);
-            }
-
+        btn3.setOnAction(event -> {
+            totLarge++;
+            totSum += large;
+            System.out.println("Number of large: " + totLarge);
+            bigT.setText(Integer.toString(totLarge));
+            bigT.setVisible(true);
         });
 
         // Selection for cream button
@@ -194,16 +207,11 @@ public class CoffeeShoppeGUI extends Application {
         cream.setText("Cream: Free");
         cream.setLayoutX(346);
         cream.setLayoutY(200);
-        cream.setOnAction(new EventHandler<ActionEvent>() {
-
-            @Override
-            public void handle(ActionEvent event) {
-                creamC++;
-                System.out.println("# of cream: " + creamC);
-                creamT.setText(Integer.toString(creamC));
-                creamT.setVisible(true);
-            }
-
+        cream.setOnAction(event -> {
+            creamC++;
+            System.out.println("# of cream: " + creamC);
+            creamT.setText(Integer.toString(creamC));
+            creamT.setVisible(true);
         });
         // Selection for rawSugar button
         Button rawS = new Button();
@@ -216,16 +224,11 @@ public class CoffeeShoppeGUI extends Application {
         rawS.setText("Raw sugar: Free");
         rawS.setLayoutX(346);
         rawS.setLayoutY(250);
-        rawS.setOnAction(new EventHandler<ActionEvent>() {
-
-            @Override
-            public void handle(ActionEvent event) {
-                rawSugarC++;
-                System.out.println("# of rawSugar: " + rawSugarC);
-                sugarT.setText(Integer.toString(rawSugarC));
-                sugarT.setVisible(true);
-            }
-
+        rawS.setOnAction(event -> {
+            rawSugarC++;
+            System.out.println("# of rawSugar: " + rawSugarC);
+            sugarT.setText(Integer.toString(rawSugarC));
+            sugarT.setVisible(true);
         });
         // Selection for shot button
         Button shot = new Button();
@@ -237,17 +240,12 @@ public class CoffeeShoppeGUI extends Application {
         shot.setText("Extra shots: $0.75");
         shot.setLayoutX(346);
         shot.setLayoutY(300);
-        shot.setOnAction(new EventHandler<ActionEvent>() {
-
-            @Override
-            public void handle(ActionEvent event) {
-                espressoShotC++;
-                totSum += eP;
-                System.out.println("# of shots: " + espressoShotC);
-                espressoT.setText(Integer.toString(espressoShotC));
-                espressoT.setVisible(true);
-            }
-
+        shot.setOnAction(event -> {
+            espressoShotC++;
+            totSum += eP;
+            System.out.println("# of shots: " + espressoShotC);
+            espressoT.setText(Integer.toString(espressoShotC));
+            espressoT.setVisible(true);
         });
 
         // Selection for compute button
@@ -256,14 +254,9 @@ public class CoffeeShoppeGUI extends Application {
         compute.setText("COMPUTE");
         compute.setLayoutX(350);
         compute.setLayoutY(400);
-        compute.setOnAction(new EventHandler<ActionEvent>() {
-
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("total sum: " + totSum);
-                showComputeDialog();
-            }
-
+        compute.setOnAction(event -> {
+            System.out.println("total sum: " + totSum);
+            showComputeDialog();
         });
 
         //Button to close the entire program
@@ -271,12 +264,7 @@ public class CoffeeShoppeGUI extends Application {
         sB.setMinSize(150, 150);
         sB.setLayoutX(550);
         sB.setLayoutY(400);
-        sB.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                Platform.exit();
-            }
-        });
+        sB.setOnAction(event -> Platform.exit());
         // Retrieving the observable list object
         ObservableList list = root.getChildren();
 
@@ -309,49 +297,5 @@ public class CoffeeShoppeGUI extends Application {
 
         // Displaying the contents of the stage
         primaryStage.show();
-    }
-
-    private static void showInputDialog(Text t) {
-        TextInputDialog d = new TextInputDialog("Change");
-
-        d.setTitle("Change name");
-        d.setHeaderText("Enter your name:");
-        d.setContentText("Name:");
-
-        Optional<String> result = d.showAndWait();
-        String trueResult = result.get();
-        result.ifPresent(name -> {
-            changeText(trueResult, t);
-        });
-
-        computeName = trueResult;
-    }
-
-    private static void changeText(String result, Text t) {
-        t.setText("Welcome " + result);
-    }
-
-    public static void showComputeDialog(){
-
-        df.setRoundingMode(RoundingMode.CEILING);
-
-        Alert computeAlert = new Alert(AlertType.INFORMATION);
-        computeAlert.setWidth(400);
-        computeAlert.setHeight(400);
-        computeAlert.setTitle("Receipt");
-        computeAlert.setHeaderText(null);
-        computeAlert.setContentText("Hey there " + computeName +
-                "\nHere is your order:\n"
-                + "You ordered " + totSmall + " amounts of small cofee\n"
-                + "You ordered " + totMed + " amounts of medium cofee\n"
-                + "You ordered " + totLarge + " amounts of large cofee\n"
-
-                + "\n\n"
-                + "You ordered " + creamC + " amounts of cream\n"
-                + "You ordered " + rawSugarC + " amounts of Sugar\n"
-                + "You ordered " + espressoShotC + " amounts of Espresso Shot"
-                + "\n\n\n\n For a grand total of: $"+df.format(totSum));
-
-        computeAlert.showAndWait();
     }
 }
