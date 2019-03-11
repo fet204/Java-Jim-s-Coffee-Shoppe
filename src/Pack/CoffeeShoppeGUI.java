@@ -1,5 +1,7 @@
 package Pack;
 
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.util.Optional;
 
 import javafx.application.Application;
@@ -31,12 +33,14 @@ public class CoffeeShoppeGUI extends Application {
 	TextField tf;
 	// Initializing values for the buttons
 	double small = 1.25;
-	static int totSmall = 0;
 	double med = 1.75;
-	static int totMed = 0;
 	double large = 2.30;
+	
+	static int totSmall = 0;
+	static int totMed = 0;
 	static int totLarge = 0;
-	double totSum = 0;
+	
+	static double totSum = 0;
 	
 	// initializing the values for the extras button
 	int creamC = 0;
@@ -45,6 +49,9 @@ public class CoffeeShoppeGUI extends Application {
 	double eP = 0.75;
 	
 	static String computeName = "";
+	
+	//Declareing a new decimal format cause it's annoying me
+	static DecimalFormat df = new DecimalFormat("#.##");
 
 	public static void main(String[] args) {
 		launch(args);
@@ -52,6 +59,7 @@ public class CoffeeShoppeGUI extends Application {
 
 	@Override
 	public void start(Stage primaryStage) {
+		
 		primaryStage.setTitle("Jim Coffee Shoppe");
 
 		// Button for name change
@@ -281,6 +289,9 @@ public class CoffeeShoppeGUI extends Application {
 	}
 	
 	public static void showComputeDialog(){
+
+		df.setRoundingMode(RoundingMode.CEILING);
+		
 		Alert computeAlert = new Alert(AlertType.INFORMATION);
 		computeAlert.setWidth(400);
 		computeAlert.setHeight(400);
@@ -289,7 +300,8 @@ public class CoffeeShoppeGUI extends Application {
 		computeAlert.setContentText("Here is your order!:\n"
 				+ "You ordered " + totSmall + " amounts of small cofee\n"
 				+ "You ordered " + totMed + " amounts of medium cofee\n"
-				+ "You ordered " + totLarge + " amounts of large cofee\n");
+				+ "You ordered " + totLarge + " amounts of large cofee\n"
+				+ "\n\n\n\n For a grand total of: $"+df.format(totSum));
 		
 		computeAlert.showAndWait();
 	}
