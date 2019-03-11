@@ -21,6 +21,8 @@ import java.util.Optional;
 
 public class CoffeeShoppeGUI extends Application {
 
+    //Declaring a new decimal format cause it's annoying me
+    static DecimalFormat df = new DecimalFormat("#.##");
     //Counting the amount of orders
     static private int totSmall = 0;
     static private int totMed = 0;
@@ -31,8 +33,6 @@ public class CoffeeShoppeGUI extends Application {
     static private int rawSugarC = 0;
     static private int espressoShotC = 0;
     static private String computeName = "";
-    //Declaring a new decimal format cause it's annoying me
-    static DecimalFormat df = new DecimalFormat("#.##");
     private Text text;
     private TextField tf;
     //Do texts for the order numbers
@@ -68,7 +68,7 @@ public class CoffeeShoppeGUI extends Application {
         t.setText("Welcome " + result);
     }
 
-    private static void showComputeDialog(){
+    private static void showComputeDialog() {
 
         df.setRoundingMode(RoundingMode.CEILING);
 
@@ -87,7 +87,7 @@ public class CoffeeShoppeGUI extends Application {
                 + "You ordered " + creamC + " amounts of cream\n"
                 + "You ordered " + rawSugarC + " amounts of Sugar\n"
                 + "You ordered " + espressoShotC + " amounts of Espresso Shot"
-                + "\n\n\n\n For a grand total of: $"+df.format(totSum));
+                + "\n\n\n\n For a grand total of: $" + df.format(totSum));
 
         computeAlert.showAndWait();
     }
