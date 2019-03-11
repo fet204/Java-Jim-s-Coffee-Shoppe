@@ -47,7 +47,6 @@ public class CoffeeShoppeGUI extends Application {
     private double eP = 0.75;
 
     public static void main(String[] args) {
-    	// Making my scanner for the 
     	
         launch(args);
     }
@@ -296,6 +295,9 @@ public class CoffeeShoppeGUI extends Application {
         list.add(creamT);
         list.add(espressoT);
         list.add(sugarT);
+        
+    	// Making my scanner for the 
+        
 
         // Creating a scene object
         Scene scene = new Scene(root, 800, 600);

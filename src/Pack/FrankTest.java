@@ -296,7 +296,14 @@ public class FrankTest extends Application {
         list.add(espressoT);
         list.add(sugarT);
         
-    	// Making my scanner for the 
+    	// Making my scanner for the Stringbuilder 
+        StringBuilder string1 = new StringBuilder("Hey there " + computeName + "\n");
+        if (totSmall == 0) {
+        	System.out.println("var1: " + var1);
+        }
+        else {
+        	System.out.println("Test: " + test);
+        }
         
 
         // Creating a scene object
