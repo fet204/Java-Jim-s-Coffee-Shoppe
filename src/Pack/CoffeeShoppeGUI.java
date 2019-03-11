@@ -14,6 +14,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextInputDialog;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.StackPane;
@@ -29,11 +31,11 @@ public class CoffeeShoppeGUI extends Application {
 	TextField tf;
 	// Initializing values for the buttons
 	double small = 1.25;
-	int totSmall = 0;
+	static int totSmall = 0;
 	double med = 1.75;
-	int totMed = 0;
+	static int totMed = 0;
 	double large = 2.30;
-	int totLarge = 0;
+	static int totLarge = 0;
 	double totSum = 0;
 	
 	// initializing the values for the extras button
@@ -41,6 +43,8 @@ public class CoffeeShoppeGUI extends Application {
 	int rawSugarC = 0;
 	int espressoShotC = 0;
 	double eP = 0.75;
+	
+	static String computeName = "";
 
 	public static void main(String[] args) {
 		launch(args);
@@ -75,6 +79,7 @@ public class CoffeeShoppeGUI extends Application {
 					b.setVisible(true);
 					tf.setVisible(false);
 					changeText(tf.getText(), text);
+					computeName = tf.getText();
 				}
 			}
 		});
@@ -210,7 +215,7 @@ public class CoffeeShoppeGUI extends Application {
 					public void handle(ActionEvent event) {
 						espressoShotC++;
 						System.out.println("total sum: " + totSum);
-
+						showComputeDialog();
 					}
 
 				});
@@ -267,9 +272,25 @@ public class CoffeeShoppeGUI extends Application {
 		result.ifPresent(name -> {
 			changeText(trueResult, t);
 		});
+		
+		computeName = trueResult;
 	}
 
 	private static void changeText(String result, Text t) {
 		t.setText("Welcome " + result);
+	}
+	
+	public static void showComputeDialog(){
+		Alert computeAlert = new Alert(AlertType.INFORMATION);
+		computeAlert.setWidth(400);
+		computeAlert.setHeight(400);
+		computeAlert.setTitle("Receipt");
+		computeAlert.setHeaderText(null);
+		computeAlert.setContentText("Here is your order!:\n"
+				+ "You ordered " + totSmall + " amounts of small cofee\n"
+				+ "You ordered " + totMed + " amounts of medium cofee\n"
+				+ "You ordered " + totLarge + " amounts of large cofee\n");
+		
+		computeAlert.showAndWait();
 	}
 }
