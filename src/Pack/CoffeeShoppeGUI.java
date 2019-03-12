@@ -84,9 +84,9 @@ public class CoffeeShoppeGUI extends Application {
         computeAlert.setTitle("Receipt");
         computeAlert.setHeaderText(null);
         computeAlert.setContentText(
-        		
-        		
-        		// Temp block off so i can make some if statements 
+
+
+        		// Temp block off so i can make some if statements
         		/*
         		"Hey there " + computeName + "\n"
                 + "Here is your order:\n"
@@ -97,14 +97,14 @@ public class CoffeeShoppeGUI extends Application {
                 + "\n\n"
                 + "You ordered " + creamC + " amounts of cream\n"
                 + "You ordered " + rawSugarC + " amounts of Sugar\n"
-                + "You ordered " + espressoShotC + " amounts of Espresso Shot"                
-                + 
+                + "You ordered " + espressoShotC + " amounts of Espresso Shot"
+                +
                 */
-        		
+
         		//IF STATEMENTS
-        		
-        		
-        		
+
+
+
                 "\n\n\n\n For a grand total of: $" + df.format(totSum));
 
         computeAlert.showAndWait();
@@ -339,6 +339,9 @@ public class CoffeeShoppeGUI extends Application {
         list.add(creamT);
         list.add(espressoT);
         list.add(sugarT);
+
+    	// Making my scanner for the
+
 
         // Creating a scene object
         showScene(primaryStage, root);
