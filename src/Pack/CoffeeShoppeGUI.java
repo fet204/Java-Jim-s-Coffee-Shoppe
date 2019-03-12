@@ -23,6 +23,7 @@ import java.util.Optional;
 
 public class CoffeeShoppeGUI extends Application {
 
+    //region Description
     //Declaring a new decimal format cause it's annoying me
     static DecimalFormat df = new DecimalFormat("#.##");
     //List root getter
@@ -49,6 +50,7 @@ public class CoffeeShoppeGUI extends Application {
     private double med = 1.75;
     private double large = 2.30;
     private double eP = 0.75;
+    //endregion
 
     public static void main(String[] args) {
         launch(args);
@@ -206,6 +208,7 @@ public class CoffeeShoppeGUI extends Application {
         Group root = new Group();
 
         // Button for name change
+        //region for the name button
         Button b = new Button("Want to change your name?");
         b.setTranslateX(300);
         b.setTranslateY(75);
@@ -237,7 +240,9 @@ public class CoffeeShoppeGUI extends Application {
 
         text.setX(275);
         text.setY(50);
+        //endregion
 
+        //region for small coffe button
         // Creating small coffee button options
         btn = new Button();
         smallT = new Text();
@@ -249,6 +254,9 @@ public class CoffeeShoppeGUI extends Application {
             smallT.setText(Integer.toString(totSmall));
             smallT.setVisible(true);
         });
+        //endregion
+
+        //region for medium button
         // Creating medium size coffee buttons
         btn2 = new Button();
         medT = new Text();
@@ -260,6 +268,9 @@ public class CoffeeShoppeGUI extends Application {
             medT.setText(Integer.toString(totMed));
             medT.setVisible(true);
         });
+        //endregion
+
+        //region for big coffee button
         // Creating large size coffee buttons
         btn3 = new Button();
         bigT = new Text();
@@ -271,7 +282,9 @@ public class CoffeeShoppeGUI extends Application {
             bigT.setText(Integer.toString(totLarge));
             bigT.setVisible(true);
         });
+        //endregion
 
+        //region for cream buton
         // Selection for cream button
         cream = new Button();
         creamT = new Text();
@@ -282,7 +295,10 @@ public class CoffeeShoppeGUI extends Application {
             creamT.setText(Integer.toString(creamC));
             creamT.setVisible(true);
         });
+        //endregion
+
         // Selection for rawSugar button
+        //region for add sugar button
         rawS = new Button();
         sugarT = new Text();
         formatSugar();
@@ -292,7 +308,10 @@ public class CoffeeShoppeGUI extends Application {
             sugarT.setText(Integer.toString(rawSugarC));
             sugarT.setVisible(true);
         });
+        //endregion
+
         // Selection for shot button
+        //region to add espresso shots
         shot = new Button();
         espressoT = new Text();
         formatEspresso();
@@ -303,7 +322,9 @@ public class CoffeeShoppeGUI extends Application {
             espressoT.setText(Integer.toString(espressoShotC));
             espressoT.setVisible(true);
         });
+        //endregion
 
+        //region Region to close the app
         // Selection for compute button
         compute = new Button();
         compute.setMinSize(150, 150);
@@ -312,6 +333,7 @@ public class CoffeeShoppeGUI extends Application {
             System.out.println("total sum: " + totSum);
             showComputeDialog();
         });
+        //endregion
 
         //Button to close the entire program
         sB = new Button("Click here to close");
@@ -321,7 +343,7 @@ public class CoffeeShoppeGUI extends Application {
         // Retrieving the observable list object
         list = root.getChildren();
 
-        // Setting the text object as a node to the group object
+        //region to add lists and stuff
         list.add(text);
         list.add(tf);
         list.add(b);
@@ -339,11 +361,8 @@ public class CoffeeShoppeGUI extends Application {
         list.add(creamT);
         list.add(espressoT);
         list.add(sugarT);
+        //endregion
 
-    	// Making my scanner for the
-
-
-        // Creating a scene object
         showScene(primaryStage, root);
     }
 }
