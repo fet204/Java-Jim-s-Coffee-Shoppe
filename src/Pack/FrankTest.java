@@ -299,10 +299,10 @@ public class FrankTest extends Application {
     	// Making my scanner for the Stringbuilder 
         StringBuilder string1 = new StringBuilder("Hey there " + computeName + "\n");
         if (totSmall == 0) {
-        	System.out.println("var1: " + var1);
+        	System.out.println("var1: " + "");
         }
         else {
-        	System.out.println("Test: " + test);
+        	System.out.println("Test: " + "");
         }
         
 
