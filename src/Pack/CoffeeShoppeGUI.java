@@ -23,33 +23,34 @@ import java.util.Optional;
 
 public class CoffeeShoppeGUI extends Application {
 
-    //region Description
+    //region to intialize variables
     //Declaring a new decimal format cause it's annoying me
     static DecimalFormat df = new DecimalFormat("#.##");
     //List root getter
     ObservableList<javafx.scene.Node> list;
     //Counting the amount of orders
-    static private int totSmall = 0;
-    static private int totMed = 0;
-    static private int totLarge = 0;
-    static private double totSum = 0;
+    private static int totSmall = 0;
+    private static int totMed = 0;
+    private static int totLarge = 0;
+    private static double totSum = 0;
     // initializing the values for the extras button
-    static private int creamC = 0;
-    static private int rawSugarC = 0;
-    static private int espressoShotC = 0;
-    static private String computeName = "";
-    static private Text text;
-    static private TextField tf;
+    private static int creamC = 0;
+    private static int rawSugarC = 0;
+    private static int espressoShotC = 0;
+    private static String computeName = "";
+    private static Text text;
+    private static TextField tf;
     //Do texts for the order numbers
-    static private Text smallT, medT, bigT;
-    static private Text creamT, sugarT, espressoT;
+    private static Text smallT, medT, bigT;
+    private static Text creamT, sugarT, espressoT;
     //Button declaration
-    static private Button b, btn, btn2, btn3, cream, rawS, shot, compute, sB;
+    private static Button b, btn, btn2, btn3, cream, rawS, shot, compute, sB;
+    private static Button subSmall, subMed, subLarge, subCream, subSugar,subShot;
     // Initializing values for the buttons
-    private double small = 1.25;
-    private double med = 1.75;
-    private double large = 2.30;
-    private double eP = 0.75;
+    private static double small = 1.25;
+    private static double med = 1.75;
+    private static double large = 2.30;
+    private static double eP = 0.75;
     //endregion
 
     public static void main(String[] args) {
@@ -199,6 +200,19 @@ public class CoffeeShoppeGUI extends Application {
         sB.setLayoutY(400);
     }
 
+    private static void subtractAmount(Button name){
+        if(name.getId() == subSmall.getId()){
+            totSmall--;
+            totSum -= small;
+            updateButtons(totSmall, smallT);
+        }
+    }
+
+    private static void updateButtons(int i, Text tf){
+        tf.setText(Integer.toString(i));
+
+    }
+
     @Override
     public void start(Stage primaryStage) {
 
@@ -206,6 +220,7 @@ public class CoffeeShoppeGUI extends Application {
 
         // Creating a Group object
         Group root = new Group();
+        list = root.getChildren();
 
         // Button for name change
         //region for the name button
@@ -297,7 +312,6 @@ public class CoffeeShoppeGUI extends Application {
         });
         //endregion
 
-        // Selection for rawSugar button
         //region for add sugar button
         rawS = new Button();
         sugarT = new Text();
@@ -310,7 +324,6 @@ public class CoffeeShoppeGUI extends Application {
         });
         //endregion
 
-        // Selection for shot button
         //region to add espresso shots
         shot = new Button();
         espressoT = new Text();
@@ -324,7 +337,7 @@ public class CoffeeShoppeGUI extends Application {
         });
         //endregion
 
-        //region Region to close the app
+        //region Region to compute the total
         // Selection for compute button
         compute = new Button();
         compute.setMinSize(150, 150);
@@ -335,13 +348,21 @@ public class CoffeeShoppeGUI extends Application {
         });
         //endregion
 
+        //region to close the app
         //Button to close the entire program
         sB = new Button("Click here to close");
         formatSB();
         sB.setOnAction(event -> Platform.exit());
+        //endregion
 
-        // Retrieving the observable list object
-        list = root.getChildren();
+        //<-------------------------Subtract Buttons----------------------->\\
+        subSmall = new Button("-");
+        subSmall.setLayoutX(btn.getLayoutX()-15);
+        subSmall.setLayoutY(btn.getLayoutY());
+        subSmall.setOnAction(event -> {
+            if(totSmall > 0)
+                subtractAmount(subSmall);
+        });
 
         //region to add lists and stuff
         list.add(text);
@@ -361,6 +382,7 @@ public class CoffeeShoppeGUI extends Application {
         list.add(creamT);
         list.add(espressoT);
         list.add(sugarT);
+        list.add(subSmall);
         //endregion
 
         showScene(primaryStage, root);

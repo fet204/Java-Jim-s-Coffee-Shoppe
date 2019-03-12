@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3c6b358-d420-4931-83e2-655acad40802" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pack/CoffeeShoppeGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pack/CoffeeShoppeGUI.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -16,32 +17,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Pack/CoffeeShoppeGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="298" lean-forward="true" selection-start-line="298" selection-end-line="298" />
-              <folding>
-                <element signature="e#1780#2221#0" />
-                <element signature="e#2334#3493#0" />
-                <element signature="e#3499#3796#0" />
-                <element signature="e#3802#4120#0" />
-                <element signature="e#4126#4442#0" />
-                <element signature="e#4448#4757#0" />
-                <element signature="e#4763#5095#0" />
-                <element signature="e#5101#5414#0" />
-                <element signature="e#5420#5564#0" />
-                <element signature="e#5570#5841#0" />
-                <element signature="e#5847#5973#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Pack/FrankTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="164" column="63" selection-start-line="164" selection-start-column="63" selection-end-line="164" selection-end-column="63" />
+            <state relative-caret-position="178">
+              <caret line="206" column="36" selection-start-line="206" selection-start-column="36" selection-end-line="206" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#658#689#0" expanded="true" />
+                <element signature="e#1832#2273#0" />
+                <element signature="e#2386#3545#0" />
+                <element signature="e#3551#3848#0" />
+                <element signature="e#3854#4172#0" />
+                <element signature="e#4178#4494#0" />
+                <element signature="e#4500#4809#0" />
+                <element signature="e#4815#5147#0" />
+                <element signature="e#5153#5466#0" />
+                <element signature="e#5472#5616#0" />
+                <element signature="e#5622#5893#0" />
+                <element signature="e#5899#6025#0" />
+                <element signature="e#7234#7265#0" expanded="true" />
+                <element signature="e#9385#9415#0" expanded="true" />
+                <element signature="e#9528#9771#0" />
+                <element signature="e#10389#10420#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -71,8 +66,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -104,7 +99,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552353792215" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552410091312" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/openjfx-11.0.2_windows-x64_bin-sdk/javafx-sdk-11.0.2/lib/javafx.web.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -157,18 +152,19 @@
       <workItem from="1552339693587" duration="359000" />
       <workItem from="1552342110550" duration="1064000" />
       <workItem from="1552345270096" duration="1146000" />
-      <workItem from="1552353921273" duration="1069000" />
+      <workItem from="1552353921273" duration="2176000" />
+      <workItem from="1552365675393" duration="1439000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3638000" />
+    <option name="totallyTimeSpent" value="6184000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1293" height="693" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16976556" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17219079" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -176,8 +172,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.06737588" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32978722" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.06737588" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -203,16 +199,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Pack/FrankTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="164" column="63" selection-start-line="164" selection-start-column="63" selection-end-line="164" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Downloads/openjfx-11.0.2_windows-x64_bin-sdk/javafx-sdk-11.0.2/lib/javafx.base.jar!/javafx/event/EventHandler.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -220,22 +206,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pack/FrankTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="172" column="23" lean-forward="true" selection-start-line="172" selection-start-column="23" selection-end-line="172" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Pack/CoffeeShoppeGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="298" lean-forward="true" selection-start-line="298" selection-end-line="298" />
+        <state relative-caret-position="178">
+          <caret line="206" column="36" selection-start-line="206" selection-start-column="36" selection-end-line="206" selection-end-column="36" />
           <folding>
-            <element signature="e#1780#2221#0" />
-            <element signature="e#2334#3493#0" />
-            <element signature="e#3499#3796#0" />
-            <element signature="e#3802#4120#0" />
-            <element signature="e#4126#4442#0" />
-            <element signature="e#4448#4757#0" />
-            <element signature="e#4763#5095#0" />
-            <element signature="e#5101#5414#0" />
-            <element signature="e#5420#5564#0" />
-            <element signature="e#5570#5841#0" />
-            <element signature="e#5847#5973#0" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#658#689#0" expanded="true" />
+            <element signature="e#1832#2273#0" />
+            <element signature="e#2386#3545#0" />
+            <element signature="e#3551#3848#0" />
+            <element signature="e#3854#4172#0" />
+            <element signature="e#4178#4494#0" />
+            <element signature="e#4500#4809#0" />
+            <element signature="e#4815#5147#0" />
+            <element signature="e#5153#5466#0" />
+            <element signature="e#5472#5616#0" />
+            <element signature="e#5622#5893#0" />
+            <element signature="e#5899#6025#0" />
+            <element signature="e#7234#7265#0" expanded="true" />
+            <element signature="e#9385#9415#0" expanded="true" />
+            <element signature="e#9528#9771#0" />
+            <element signature="e#10389#10420#0" expanded="true" />
           </folding>
         </state>
       </provider>
