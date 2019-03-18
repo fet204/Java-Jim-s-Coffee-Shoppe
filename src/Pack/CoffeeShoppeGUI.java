@@ -201,16 +201,38 @@ public class CoffeeShoppeGUI extends Application {
     }
 
     private static void subtractAmount(Button name){
-        if(name.getId() == subSmall.getId()){
+        if(name.equals(subSmall)){
             totSmall--;
             totSum -= small;
             updateButtons(totSmall, smallT);
+        }
+        if (name.equals(subMed)) {
+            totMed--;
+            totSum -= med;
+            updateButtons(totMed, medT);
+        }
+        if(name.equals(subLarge)){
+            totLarge --;
+            totSum -= large;
+            updateButtons(totLarge, bigT);
+        }
+        if(name.equals(subCream)){
+            creamC--;
+            updateButtons(creamC, creamT);
+        }
+        if(name.equals(subSugar)){
+            rawSugarC--;
+            updateButtons(rawSugarC, sugarT);
+        }
+        if(name.equals(subShot)){
+            espressoShotC--;
+            totSum -= eP;
+            updateButtons(espressoShotC, espressoT);
         }
     }
 
     private static void updateButtons(int i, Text tf){
         tf.setText(Integer.toString(i));
-
     }
 
     @Override
@@ -357,11 +379,63 @@ public class CoffeeShoppeGUI extends Application {
 
         //<-------------------------Subtract Buttons----------------------->\\
         subSmall = new Button("-");
-        subSmall.setLayoutX(btn.getLayoutX()-15);
+        subSmall.setFont(new Font(20));
+        subSmall.setLayoutX(btn.getLayoutX()-40);
         subSmall.setLayoutY(btn.getLayoutY());
-        subSmall.setOnAction(event -> {
-            if(totSmall > 0)
+        subSmall.setOnAction((event) -> {
+            if(totSmall > 0){
                 subtractAmount(subSmall);
+            }
+        });
+
+        subMed = new Button("-");
+        subMed.setFont(new Font(20));
+        subMed.setLayoutX(subSmall.getLayoutX());
+        subMed.setLayoutY(btn2.getLayoutY());
+        subMed.setOnAction((event) -> {
+            if(totMed > 0){
+                subtractAmount(subMed);
+            }
+        });
+
+        subLarge = new Button("-");
+        subLarge.setFont(new Font(20));
+        subLarge.setLayoutX(subMed.getLayoutX());
+        subLarge.setLayoutY(btn3.getLayoutY());
+        subLarge.setOnAction(actionEvent -> {
+            if(totLarge > 0){
+                subtractAmount(subLarge);
+            }
+        });
+
+        subSugar = new Button("-");
+        subSugar.setFont(new Font(20));
+        subSugar.setLayoutX(rawS.getLayoutX() - 40);
+        subSugar.setLayoutY(rawS.getLayoutY());
+        subSugar.setOnAction(actionEvent -> {
+            if(rawSugarC > 0){
+                subtractAmount(subSugar);
+            }
+        });
+
+        subCream = new Button("-");
+        subCream.setFont(new Font(20));
+        subCream.setLayoutX(subSugar.getLayoutX());
+        subCream.setLayoutY(cream.getLayoutY());
+        subCream.setOnAction(actionEvent -> {
+            if(creamC > 0){
+                subtractAmount(subCream);
+            }
+        });
+
+        subShot = new Button("-");
+        subShot.setFont(new Font(20));
+        subShot.setLayoutX(subCream.getLayoutX());
+        subShot.setLayoutY(shot.getLayoutY());
+        subShot.setOnAction(actionEvent -> {
+            if(espressoShotC > 0){
+                subtractAmount(subShot);
+            }
         });
 
         //region to add lists and stuff
@@ -383,6 +457,11 @@ public class CoffeeShoppeGUI extends Application {
         list.add(espressoT);
         list.add(sugarT);
         list.add(subSmall);
+        list.add(subMed);
+        list.add(subLarge);
+        list.add(subSugar);
+        list.add(subShot);
+        list.add(subCream);
         //endregion
 
         showScene(primaryStage, root);
