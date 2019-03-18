@@ -89,7 +89,7 @@ public class CoffeeShoppeGUI extends Application {
         computeAlert.setContentText(
 
 
-        		// Temp block off so i can make some if statements
+        		// Receipt text
 
         		"Hey there " + computeName + "\n"
                 + "Here is your order:\n"
