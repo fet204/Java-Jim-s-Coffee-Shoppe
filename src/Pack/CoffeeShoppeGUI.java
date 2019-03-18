@@ -90,7 +90,7 @@ public class CoffeeShoppeGUI extends Application {
 
 
         		// Temp block off so i can make some if statements
-        		/*
+
         		"Hey there " + computeName + "\n"
                 + "Here is your order:\n"
                 + "You ordered " + totSmall + " amounts of small coffee\n"
@@ -102,7 +102,7 @@ public class CoffeeShoppeGUI extends Application {
                 + "You ordered " + rawSugarC + " amounts of Sugar\n"
                 + "You ordered " + espressoShotC + " amounts of Espresso Shot"
                 +
-                */
+
 
         		//IF STATEMENTS
 
