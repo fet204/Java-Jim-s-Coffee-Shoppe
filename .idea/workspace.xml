@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Java-Jim-s-Coffee-Shoppe" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="d3c6b358-d420-4931-83e2-655acad40802" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Pack/CoffeeShoppeGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pack/CoffeeShoppeGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java-Jim-s-Coffee-Shoppe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java-Jim-s-Coffee-Shoppe.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java-Jim-s-Coffee-Shoppe/META-INF/Java-Jim-s-Coffee-Shoppe.kotlin_module" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,23 +23,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Pack/CoffeeShoppeGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="94" column="41" lean-forward="true" selection-start-line="94" selection-start-column="41" selection-end-line="94" selection-end-column="41" />
+            <state relative-caret-position="283">
+              <caret line="107" selection-start-line="107" selection-end-line="107" />
               <folding>
                 <element signature="e#658#689#0" expanded="true" />
                 <element signature="e#1942#2383#0" />
-                <element signature="e#3661#3958#0" />
-                <element signature="e#3964#4282#0" />
-                <element signature="e#4288#4604#0" />
-                <element signature="e#4610#4919#0" />
-                <element signature="e#4925#5257#0" />
-                <element signature="e#5263#5576#0" />
-                <element signature="e#5582#5726#0" />
-                <element signature="e#5732#6003#0" />
-                <element signature="e#6009#6135#0" />
-                <element signature="e#6141#6993#0" />
-                <element signature="e#7044#7045#0" expanded="true" />
-                <element signature="e#7091#7092#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -52,21 +47,49 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="25" />
-    <option name="y" value="50" />
-    <option name="width" value="3150" />
-    <option name="height" value="1600" />
+    <option name="x" value="1585" />
+    <option name="width" value="1628" />
+    <option name="height" value="1715" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
+            <path>
+              <item name="Java-Jim-s-Coffee-Shoppe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java-Jim-s-Coffee-Shoppe" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Java-Jim-s-Coffee-Shoppe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java-Jim-s-Coffee-Shoppe" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Java-Jim-s-Coffee-Shoppe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java-Jim-s-Coffee-Shoppe" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Java-Jim-s-Coffee-Shoppe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java-Jim-s-Coffee-Shoppe" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Java-Jim-s-Coffee-Shoppe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java-Jim-s-Coffee-Shoppe" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Pack" type="462c0819:PsiDirectoryNode" />
+            </path>
             <path>
               <item name="Java-Jim-s-Coffee-Shoppe" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
@@ -80,12 +103,12 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552597093510" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552946618871" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/openjfx-11.0.2_windows-x64_bin-sdk/javafx-sdk-11.0.2/lib" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.folding" />
@@ -106,7 +129,7 @@
     <configuration name="CoffeeShoppeGUI" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Pack.CoffeeShoppeGUI" />
       <module name="Java-Jim-s-Coffee-Shoppe" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\vince\Downloads\openjfx-11.0.2_windows-x64_bin-sdk\javafx-sdk-11.0.2\lib&quot; --add-modules=javafx.controls,javafx.fxml" />
+      <option name="VM_PARAMETERS" value="--module-path C:\Users\vince\Downloads\openjfx-11.0.2_windows-x64_bin-sdk\javafx-sdk-11.0.2\lib --add-modules=javafx.controls,javafx.fxml" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -138,18 +161,19 @@
       <workItem from="1552497041743" duration="2075000" />
       <workItem from="1552586018035" duration="3774000" />
       <workItem from="1552864857140" duration="113000" />
-      <workItem from="1552935710808" duration="352000" />
+      <workItem from="1552935710808" duration="380000" />
+      <workItem from="1552942983018" duration="2785000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13361000" />
+    <option name="totallyTimeSpent" value="16174000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1293" height="693" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18189168" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1851253" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -158,7 +182,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32978722" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23226951" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.23226951" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -168,7 +192,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32978722" />
+      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.32446808" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -203,23 +227,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Pack/CoffeeShoppeGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="94" column="41" lean-forward="true" selection-start-line="94" selection-start-column="41" selection-end-line="94" selection-end-column="41" />
+        <state relative-caret-position="283">
+          <caret line="107" selection-start-line="107" selection-end-line="107" />
           <folding>
             <element signature="e#658#689#0" expanded="true" />
             <element signature="e#1942#2383#0" />
-            <element signature="e#3661#3958#0" />
-            <element signature="e#3964#4282#0" />
-            <element signature="e#4288#4604#0" />
-            <element signature="e#4610#4919#0" />
-            <element signature="e#4925#5257#0" />
-            <element signature="e#5263#5576#0" />
-            <element signature="e#5582#5726#0" />
-            <element signature="e#5732#6003#0" />
-            <element signature="e#6009#6135#0" />
-            <element signature="e#6141#6993#0" />
-            <element signature="e#7044#7045#0" expanded="true" />
-            <element signature="e#7091#7092#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -230,10 +242,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>Java-Jim-s-Coffee-Shoppe</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -253,6 +267,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>lib</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

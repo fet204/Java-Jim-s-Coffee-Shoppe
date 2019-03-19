@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="Java-Jim-s-Coffee-Shoppe">
+    <output-path>$PROJECT_DIR$/out/artifacts/Java_Jim_s_Coffee_Shoppe</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="Pack.CoffeeShoppeGUI" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="Java_Jim_s_Coffee_Shoppe.jar">
+        <element id="module-output" name="Java-Jim-s-Coffee-Shoppe" />
+        <element id="library" level="project" name="javafx-swt" />
+      </element>
+    </root>
+  </artifact>
+</component>
